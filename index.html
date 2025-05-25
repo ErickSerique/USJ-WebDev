@@ -13,36 +13,43 @@
 
 <body>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <img src="Imagens/unisaojose_logo.jpeg" width="45" alt="">
-        <div class="btn-group">
-            <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Danger
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="Imagens/unisaojose_logo.jpeg" alt="Logo do site" width="60"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                <li>
-                    <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Separated link</a></li>
-            </ul>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown link
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <!-- CARROSSEL DO TOPO -->
     <header>
-        <div id="carouselExampleIndicators" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="Imagens/Banner Borges.jpg" class="d-block w-100" alt="...">
@@ -54,12 +61,12 @@
                     <img src="Imagens/Banner Borges.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
                 data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
@@ -67,9 +74,66 @@
         </div>
     </header>
 
+    <section>
+        <div class="card" style="width: 15rem;">
+            <img src="Imagens/unisaojose_logo.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card’s content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">An item</li>
+                <li class="list-group-item">A second item</li>
+                <li class="list-group-item">A third item</li>
+            </ul>
+            <div class="card-body">
+                <button type="button" class="btn btn-success"><img src="Imagens/Simbolos/cart.svg" alt="Carrinho de Compras"> Comprar</button>
+            </div>
+        </div>
+    </section>
+
     <!-- RODAPÉ -->
-    <footer class="bg-dark text-light text-center py-3">
-        &copy; 2025 UniSãoJosé. Todos os direitos reservados.
+    <footer class="bg-dark text-light pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>Compras</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Produtos</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Promoções</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <h5>Sobre Nós</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="equipe.html" class="text-light text-decoration-none" target="_self">Nossa
+                                Equipe</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Termos & Políticas</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Sobre o Site</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <h5>Fale Conosco</h5>
+                    <p class="mb-1">Email: contato@lojadehardware.com</p>
+                    <p class="mb-1">Telefone: (21) 99999-9999</p>
+                    <div>
+
+                        <a href="" class="text-light me-3 text-decoration-none"><img
+                                src="Imagens/Simbolos/bootstrap.svg" alt="">Facebook</a>
+                        <a href="#" class="text-light me-3 text-decoration-none">Instagram</a>
+                        <a href="#" class="text-light text-decoration-none">LinkedIn</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="border-secondary">
+            <p class="text-center mb-0">&copy; 2025 UniSãoJosé. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
     <!-- SCRIPTS -->
