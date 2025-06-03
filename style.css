@@ -1,0 +1,30 @@
+/* Style for the "Promoções" link */
+.navbar-nav .nav-link {
+    color: #000000; /* Change text color to gold */
+    font-weight:lighter; /* Make the text bold */
+    text-transform: capitalize; /* Transform text to uppercase */
+    padding: 0; /* Add padding */
+    border-radius: 5px; /* Add rounded corners */
+    margin-right: 15px; /* Add right margin */
+}
+
+.navbar-nav .nav-link.active {
+    font-weight: bold; /* Make the text bold */
+    border: 2px solid #000; /* Add a black border */
+    border-radius: 5px; /* Keep rounded corners */
+    padding: 5px 10px; /* Add padding to make space for the border */
+}
+
+.btn {
+    background-color: #127503; /* Set button background color to black */
+    color: #fff; /* Set button text color to white */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding */
+    border-radius: 5px; /* Add rounded corners */
+}
+.btn:hover {
+    background-color: #0f5a02; /* Darken button on hover */
+    color: #fff; /* Keep text color white on hover */
+    transform: scale(1.1); /* Slightly enlarge button on hover */ 
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}

@@ -31,7 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Promoções</a>
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Sobre Nós</a>
@@ -148,6 +148,22 @@
 
     <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        //REMOVER DEPOIS
+        // Select all navbar links
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+        // Add a click event listener to each link
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                // Remove the 'active' class from all links
+                navLinks.forEach(nav => nav.classList.remove('active'));
+
+                // Add the 'active' class to the clicked link
+                this.classList.add('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
