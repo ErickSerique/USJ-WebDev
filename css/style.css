@@ -21,7 +21,7 @@
     border-radius: 5px;
     /* Keep rounded corners */
     padding: 5px 10px;
-    /* Add padding to make space for the border */
+    color: #FFFFFF;
 }
 
 .btn {
