@@ -65,6 +65,10 @@
     height: 24px;
 }
 
+.is-invalid {
+  border: 1px solid #dc3545 !important;
+}
+
 .btn-icon {
     background-color: #c5c5c5;
     border: none;
