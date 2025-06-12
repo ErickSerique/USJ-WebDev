@@ -4,7 +4,7 @@ const toastMessage = document.getElementById("toastMessage");
 
 const onlyLetters = /^[A-Za-zÀ-ÿ\s]+$/;
 const cpfPattern = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
-const phonePattern = /^\d{2}-\d{8,9}$/;
+const phonePattern = /^\d{2} \d{4,5}-\d{4}$/;
 
 // Máscara para CPF
 function formatCPF(value) {
@@ -16,12 +16,13 @@ function formatCPF(value) {
     .replace(/(\d{3})(\d{1,2})$/, '$1-$2');
 }
 
-// Máscara para telefone
+// Máscara para telefone (novo formato)
 function formatPhone(value) {
   return value
     .replace(/\D/g, '')
     .slice(0, 11)
-    .replace(/(\d{2})(\d{0,9})/, '$1-$2');
+    .replace(/(\d{2})(\d)/, '$1 $2')
+    .replace(/(\d{4,5})(\d)/, '$1-$2');
 }
 
 ["cpf", "telefoneCelular", "telefoneFixo"].forEach(id => {
@@ -96,11 +97,11 @@ form.addEventListener("submit", function (e) {
   } else clearError("cpf");
 
   if (!telefoneCelular || !phonePattern.test(telefoneCelular)) {
-    showError("telefoneCelular", "Formato: XX-XXXXXXXXX");
+    showError("telefoneCelular", "Formato: XX XXXXX-XXXX");
   } else clearError("telefoneCelular");
 
   if (telefoneFixo && !phonePattern.test(telefoneFixo)) {
-    showError("telefoneFixo", "Formato: XX-XXXXXXXXX");
+    showError("telefoneFixo", "Formato: XX XXXX-XXXX");
   } else clearError("telefoneFixo");
 
   if (!endereco) {
@@ -108,7 +109,7 @@ form.addEventListener("submit", function (e) {
   } else clearError("endereco");
 
   if (login.length !== 6) {
-    showError("login", "ID Login deve ter exatamente 6 caracteres");
+    showError("login", "Login deve ter exatamente 6 caracteres");
   } else clearError("login");
 
   if (senha.length !== 8) {

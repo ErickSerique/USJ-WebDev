@@ -29,29 +29,48 @@
 
 <body>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg bg-danger navbar-dark sticky-top shadow-sm">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img src="../assets/images/banners-logos/logo-pontoquente.png" alt="Logo do site" width="200"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nós</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Produtos</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="index.html#PlacaVideo">Placas de Vídeo</a></li>
-                            <li><a class="dropdown-item" href="index.html#Gabinete">Gabinetes</a></li>
-                            <li><a class="dropdown-item" href="index.html#SSDRAM">SSD e Memórias RAM</a></li>
-                            <li><a class="dropdown-item" href="index.html#CPU">Processadores</a></li>
-                            <li><a class="dropdown-item" href="index.html#MouseTeclado">Mouses e Teclados</a></li>
-                        </ul>
-                    </li>
-                </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+            <img src="../assets/images/banners-logos/logo-pontoquente.png" alt="Ponto Quente" class="img-fluid">
+        </a>
+        
+        <!-- Toggler Mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Conteúdo da Navbar -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sobre.html">Sobre Nós</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="produtosDropdown" role="button" data-bs-toggle="dropdown">
+                        Produtos
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="index.html#PlacaVideo">Placas de Vídeo</a></li>
+                        <li><a class="dropdown-item" href="index.html#Gabinete">Gabinetes</a></li>
+                        <li><a class="dropdown-item" href="index.html#SSDRAM">SSD e Memórias RAM</a></li>
+                        <li><a class="dropdown-item" href="index.html#CPU">Processadores</a></li>
+                        <li><a class="dropdown-item" href="index.html#MouseTeclado">Mouses e Teclados</a></li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <!-- Botões de Ação -->
+            <div class="navbar-btns d-flex">
+                <a href="login.html" class="btn btn-login">Login</a>
+                <a href="cadastro.html" class="btn btn-signup">Cadastre-se</a>
             </div>
         </div>
+    </div>
     </nav>
 
     <!-- FORMULÁRIO DE CADASTRO -->
@@ -115,15 +134,15 @@
                             <!-- Telefone Celular -->
                             <div class="mb-3">
                                 <label for="telefoneCelular" class="form-label">Telefone Celular</label>
-                                <input type="text" class="form-control" id="telefoneCelular" name="telefoneCelular" placeholder="XX-XXXXXXXX" required>
-                                <div class="error-message" id="telefoneCelularError">Formato: XX-XXXXXXXX</div>
+                                <input type="text" class="form-control" id="telefoneCelular" name="telefoneCelular" placeholder="XX XXXXX-XXXX" required>
+                                <div class="error-message" id="telefoneCelularError">Formato: XX XXXXX-XXXX</div>
                             </div>
-                            
+
                             <!-- Telefone Fixo -->
                             <div class="mb-3">
                                 <label for="telefoneFixo" class="form-label">Telefone Fixo (Opcional)</label>
-                                <input type="text" class="form-control" id="telefoneFixo" name="telefoneFixo" placeholder="XX-XXXXXXXX">
-                                <div class="error-message" id="telefoneFixoError">Formato: XX-XXXXXXXX</div>
+                                <input type="text" class="form-control" id="telefoneFixo" name="telefoneFixo" placeholder="XX XXXXX-XXXX">
+                                <div class="error-message" id="telefoneFixoError">Formato: XX XXXX-XXXX</div>
                             </div>
                             
                             <!-- Endereço Completo -->
@@ -133,18 +152,18 @@
                                 <div class="error-message" id="enderecoError">Por favor, insira seu endereço completo</div>
                             </div>
                             
-                            <!-- ID Login -->
+                            <!-- Login -->
                             <div class="mb-3">
-                                <label for="login" class="form-label">ID Login</label>
+                                <label for="login" class="form-label">Login</label>
                                 <input type="text" class="form-control" id="login" name="login" required>
-                                <div class="error-message" id="loginError">O ID Login deve ter exatamente 6 caracteres alfabéticos</div>
+                                <div class="error-message" id="loginError">O Login deve ter exatamente 6 caracteres</div>
                             </div>
                             
                             <!-- Senha -->
                             <div class="mb-3">
                                 <label for="senha" class="form-label">Senha</label>
                                 <input type="password" class="form-control" id="senha" name="senha" required>
-                                <div class="error-message" id="senhaError">A senha deve ter exatamente 8 caracteres alfabéticos</div>
+                                <div class="error-message" id="senhaError">A senha deve ter exatamente 8 caracteres</div>
                             </div>
                             
                             <!-- Confirmar Senha -->
