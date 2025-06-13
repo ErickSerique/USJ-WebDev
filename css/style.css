@@ -197,3 +197,18 @@
   padding: 10px;
   background-color: #fff;
 }
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background: #f8f9fa; /* cor de fundo clara e agradável */
+}
+
+main {
+    flex: 1;
+}
