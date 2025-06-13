@@ -66,7 +66,7 @@ form.addEventListener("submit", function (e) {
         document.getElementById("feedbackToast").classList.add("bg-success");
         toastEl.show();
         setTimeout(() => {
-            window.location.href = "index.html";
+            window.location.href = "../index.html";
         }, 2500);
     } else {
         toastMessage.innerText = "Login ou senha incorretos.";
