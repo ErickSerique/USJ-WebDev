@@ -59,12 +59,19 @@ form.addEventListener("submit", function (e) {
     // Obter do localStorage
     const storedLogin = localStorage.getItem("usuario_login");
     const storedSenha = localStorage.getItem("usuario_senha");
+    const storedNome = localStorage.getItem("usuario_nome");
 
     if (loginInput === storedLogin && senhaInput === storedSenha) {
+        // Criar sessão com nome do usuário
+        if (storedNome) {
+            localStorage.setItem("usuario_logado", storedNome);
+        }
+
         toastMessage.innerText = "Login realizado com sucesso! Redirecionando...";
         document.getElementById("feedbackToast").classList.remove("bg-danger");
         document.getElementById("feedbackToast").classList.add("bg-success");
         toastEl.show();
+
         setTimeout(() => {
             window.location.href = "../index.html";
         }, 2500);
