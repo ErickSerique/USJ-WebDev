@@ -131,4 +131,5 @@ form.addEventListener("submit", function (e) {
       window.location.href = "login.html";
     }, 2500);
   }
+  localStorage.setItem("usuario_nome", nome);
 });
