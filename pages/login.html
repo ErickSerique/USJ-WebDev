@@ -14,24 +14,30 @@
             font-size: 0.875rem;
             display: none;
         }
+
         .is-invalid {
             border-color: #dc3545 !important;
         }
+
         .toast-container {
             position: fixed;
             top: 20px;
             right: 20px;
             z-index: 1100;
         }
-        html, body {
+
+        html,
+        body {
             height: 100%;
             margin: 0;
             display: flex;
             flex-direction: column;
         }
+
         main {
             flex: 1 0 auto;
         }
+
         footer {
             flex-shrink: 0;
         }
@@ -40,48 +46,49 @@
 
 <body>
     <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-    <div class="container">
-        <!-- Logo -->
-        <a class="navbar-brand" href="index.html">
-            <img src="../assets/images/banners-logos/logo-pontoquente.png" alt="Ponto Quente" class="img-fluid">
-        </a>
-        
-        <!-- Toggler Mobile -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <!-- Conteúdo da Navbar -->
-        <div class="collapse navbar-collapse" id="navbarContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="sobre.html">Sobre Nós</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="produtosDropdown" role="button" data-bs-toggle="dropdown">
-                        Produtos
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="index.html#PlacaVideo">Placas de Vídeo</a></li>
-                        <li><a class="dropdown-item" href="index.html#Gabinete">Gabinetes</a></li>
-                        <li><a class="dropdown-item" href="index.html#SSDRAM">SSD e Memórias RAM</a></li>
-                        <li><a class="dropdown-item" href="index.html#CPU">Processadores</a></li>
-                        <li><a class="dropdown-item" href="index.html#MouseTeclado">Mouses e Teclados</a></li>
-                    </ul>
-                </li>
-            </ul>
-            
-            <!-- Botões de Ação -->
-            <div class="navbar-btns d-flex">
-                <a href="login.html" class="btn btn-login">Login</a>
-                <a href="cadastro.html" class="btn btn-signup">Cadastre-se</a>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/images/banners-logos/logo-pontoquente.png" alt="Ponto Quente" class="img-fluid">
+            </a>
+
+            <!-- Toggler Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Conteúdo da Navbar -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="produtosDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Produtos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../index.html#PlacaVideo">Placas de Vídeo</a></li>
+                            <li><a class="dropdown-item" href="../index.html#Gabinete">Gabinetes</a></li>
+                            <li><a class="dropdown-item" href="../index.html#SSDRAM">SSD e Memórias RAM</a></li>
+                            <li><a class="dropdown-item" href="../index.html#CPU">Processadores</a></li>
+                            <li><a class="dropdown-item" href="../index.html#MouseTeclado">Mouses e Teclados</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Botões de Ação -->
+                <div class="navbar-btns d-flex">
+                    <a href="login.html" class="btn btn-login">Login</a>
+                    <a href="cadastro.html" class="btn btn-signup">Cadastre-se</a>
+                </div>
             </div>
         </div>
-    </div>
     </nav>
 
     <!-- FORMULÁRIO DE LOGIN -->
@@ -133,15 +140,16 @@
                 <div class="col-md-4 mb-3">
                     <h5>Compras</h5>
                     <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
-                        <li><a href="index.html#Ofertas" class="text-light text-decoration-none">Produtos</a></li>
+                        <li><a href="../index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="../index.html#ofertas" class="text-light text-decoration-none">Produtos</a></li>
                     </ul>
                 </div>
 
                 <div class="col-md-4 mb-3">
                     <h5>Sobre Nós</h5>
                     <ul class="list-unstyled">
-                        <li><a href="sobre.html#equipe" class="text-light text-decoration-none" target="_self">Nossa Equipe</a></li>
+                        <li><a href="sobre.html#equipe" class="text-light text-decoration-none" target="_self">Nossa
+                                Equipe</a></li>
                         <li><a href="sobre.html#sobre" class="text-light text-decoration-none">Sobre o Site</a></li>
                         <li><a href="termos.html" class="text-light text-decoration-none">Termos & Políticas</a></li>
                     </ul>
@@ -153,8 +161,10 @@
 
                     <div>
                         <p>Site da Faculdade: <a href="https://saojose.br" target="_blank">UniSãoJosé</a></p>
-                        <a href="https://www.instagram.com/unisaojose/" class="text-light me-3 text-decoration-none" target="_blank">Instagram</a>
-                        <a href="https://www.linkedin.com/school/unisaojose/posts/?feedView=all" class="text-light text-decoration-none" target="_blank">LinkedIn</a>
+                        <a href="https://www.instagram.com/unisaojose/" class="text-light me-3 text-decoration-none"
+                            target="_blank">Instagram</a>
+                        <a href="https://www.linkedin.com/school/unisaojose/posts/?feedView=all"
+                            class="text-light text-decoration-none" target="_blank">LinkedIn</a>
                     </div>
                 </div>
             </div>
@@ -168,4 +178,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/login.js"></script>
 </body>
+
 </html>
